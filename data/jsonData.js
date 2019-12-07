@@ -1,4 +1,4 @@
-[
+const json = [
     {
         "developer": "javascript",
         "state": "texas",
@@ -40,4 +40,8 @@
         "age": "28"
     }
 ]
-/Users/lukassimianer/Desktop/apiMaker/developer-tool-api/data/jsonData.js
+
+
+export default json;
+// github route test
+// /Users/lukassimianer/Desktop/apiMaker/developer-tool-api/data/jsonData.js

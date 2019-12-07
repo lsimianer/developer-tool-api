@@ -1,15 +1,38 @@
 /* eslint-disable class-methods-use-this */
 import db from '../db/db';
+import json from'../data/jsonData.js';
+import xmlResponse from '../data/xmlData.js';
 
-class TodosController {
-  getAllTodos(req, res) {
+class Controller {
+ 
+//JSON ROUTES START
+  getAllJson(req, res) {
     return res.status(200).send({
       success: 'true',
-      message: 'todos retrieved successfully',
-      todos: db,
+      message: 'JSON payload retrieved successfully',
+      JSONPayload: json,
     });
   }
+//JSON ROUTES END
+//XML ROUTES START
 
+  getAllXML(req, res) {
+    return res.status(200).send({
+      success: 'true',
+      message: 'XML payload retrieved successfully',
+      XMLPayload: xmlResponse,
+    });
+  }
+//XML ROUTES END
+//TODO ROUTES START
+
+getAllTodos(req, res) {
+  return res.status(200).send({
+    success: 'true',
+    message: 'todos retrieved successfully',
+    todos: db,
+  });
+}
   getTodo(req, res) {
     const id = parseInt(req.params.id, 10);
     db.map((todo) => {
@@ -122,6 +145,7 @@ class TodosController {
     });
   }
 }
+//TODO ROUTES END
 
-const todoController = new TodosController();
-export default todoController;
+const apiController = new Controller();
+export default apiController;
