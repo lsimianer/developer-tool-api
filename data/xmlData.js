@@ -24,3 +24,4 @@ var xmlResponse = xml({Author: [{ Info: [{ Name: 'Lukas Simianer' },{Portfolio :
 
     // github test route
     //  /Users/lukassimianer/Desktop/apiMaker/developer-tool-api/data/xmlData.js
+    //  add local route
